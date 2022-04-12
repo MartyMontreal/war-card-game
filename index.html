@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>War Card Game</title>
+      <link rel="stylesheet" type="text/css" href="style.css">
+   </head>
+   <body>
+      <h1>Let's Play War</h1>
+      <h4>
+         <button id="id_hitMe">4.Hit me!</button>        
+         <p id="idText"></p>
+      </h4>
+      <div class="container">
+         <div class="section">
+            <h4><button id="id_putDeckOnScreen">1.Show Cards</button>
+               My deck of Cards:
+            </h4>
+         </div>
+         <div class="section">
+            <h4><button id="id_shuffledDeckOnScreen">2.Shuffle Cards</button>      
+               My deck of Cards Shuffled. <small>Our shuffle algorithme is not casino quality. We like to shuffle a few times just to be sure.</small>
+            </h4>
+            </h4>
+         </div>
+         <div class="section">
+            <h4><button id="id_dealCards">3.Deal Cards</button>          
+               Player's Cards
+            </h4>
+         </div>
+         <div class="section">
+            <h4>Computer's cards</h4>
+         </div>
+      </div>
+      <div class="container">
+         <div id="id_deck" class="section border"> </div>
+         <div id="id_deck_sorted"class="section border"> </div>
+         <div id="id_player_cards"class="section border"> </div>
+         <div id="id_computer_cards"class="section border"> </div>
+      </div>
+      <script src="class.js"></script>
+      <script src="main.js"></script>
+   </body>
+</html>
+
