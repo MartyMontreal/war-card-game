@@ -43,10 +43,21 @@ class Deck {
   
   // class method: shuffle cards
   shuffleDeck() {
-    //sort docs https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort/#sect1
-    return this.deck.sort((a, b) => 0.5 - Math.random());
-  }
+    // https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
+    let currentIndex = this.deck.length,  randomIndex;
 
+    // While there remain elements to shuffle.
+    while (currentIndex != 0) {
+
+      // Pick a remaining element.
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+
+      // And swap it with the current element.
+      [this.deck[currentIndex], this.deck[randomIndex]] = [this.deck[randomIndex], this.deck[currentIndex]];
+    }
+    return this.deck;
+  }
   
   // class method - get card color
   color(suit){
